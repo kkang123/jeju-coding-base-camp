@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>order</title>
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+        html{
+            height: 100%;
+        }
+        body{
+           display: flex;
+           justify-content: center;
+           align-items: center; 
+           height: 100%;
+        }
+
+        .container{
+            display: flex;
+            background: cornsilk;
+            /* height: 100vh; */
+        }
+
+        .item{
+            transition: 0.5s;
+            cubi-bezier(0.97, -07, 0.28, 2.62)
+        }
+        
+       .item:hover{
+        /* 아이템에 커서 올릴 때 */
+        /* width: 200px; */
+        /* height: 100px; */
+        transform: scale(1.5);
+        /* 1 100%  2 200% */
+        z-index: 1;
+        background: red;
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">aaaaaaaaaaaaaaa</div>
+        <div class="item">bbbbbbbbbbb</div>
+        <div class="item">ccccccccccccccccccccccc</div>
+    </div>
+    
+</body>
+</html>

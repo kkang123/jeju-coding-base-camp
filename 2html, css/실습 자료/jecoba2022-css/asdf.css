@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    
+    width: 100%
+}
+
+img{
+    
+    margin: 25px;
+    width: 100%;
+    
+    border: 5px solid black;
+}
+
+header{
+    background: #cb5a73;
+    padding: 20px;
+}
+
+.maintext{
+    background: #688cda;
+    padding: 20px;
+}
+}
+
+.text-se{
+    background: #e1a85a;
+    padding: 20px;
+}
+}
+
+.text-th{
+    background: #4d9688;
+    padding: 20px;
+}
+}

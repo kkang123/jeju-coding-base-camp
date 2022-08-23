@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./reset.css">
+    <title>align-items</title>
+    <style>
+        .container{
+            background: purple;
+            height: 100vh;
+
+            display: flex;
+
+
+            /* 수직축 방향 정렬 */
+
+            /* align-items: stretch; */
+            /* align-items: flex-start; */
+            /* align-items: flex-end; */
+            align-items: center;
+            /* align-items: baseline; */
+            
+        }
+
+        /*.no-flexbox .item{
+            display: inline-block;
+            width: 20%;
+        }*/
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">aaaafadfadfafdsdfasaaaa</div>
+        <div class="item">bbbdfaffdafdasfadb</div>
+        <div class="item">ccccccccasdfsdfasdfasdfsc</div>
+    </div>
+
+    <strong>zzzz</strong>
+
+    <script src="modernizr.js"></script>
+    <script>
+        console.log(Modernizr.touchevents);
+    
+
+    if(Modernizr.touchevents){
+        //지원 하면 ...
+    } else {
+        //지원 안하면 ...
+    }
+    </script>
+</body>
+</html>

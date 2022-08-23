@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        /* #cb5a73 */
+        /* #688cda */
+        /* #e1a85a */
+        /* #4d9688 */
+        
+        body{
+            padding: 30px;
+            line-height: 1.4;
+        }
+
+        img{
+            max-width: 100%;
+        }
+
+        .gap{
+            padding: 20px;
+        }
+
+
+        .article-image{
+            width: 100%;
+        }
+
+
+        .header{
+            background: #cb5a73;
+            
+        }
+
+        .header-title{
+            text-align: center;
+        }
+
+        .main-article{
+        background: #688cda;
+
+        text-align: justify;
+        }
+
+        .ad{
+            background: #e1a85a;
+        }
+        .footer{
+            background: #4d9688;
+        }
+
+        /* 미디어 쿼리 media queries */
+        /* 800px를 초과하면 변함 */
+        @media(min-width: 600px){
+            .header{
+                background: yellow;
+            }
+
+            .content-container{
+                font-size: 0;
+            }
+            
+            .main-article{
+                display: inline-block;
+                width: 60%;
+                font-size: 1rem;
+
+                vertical-align: top;
+            }
+
+            .ad{
+                display: inline-block;
+                width: 40%;
+                font-size: 1rem;
+
+                vertical-align: top;
+            }
+        }
+
+        @media(min-width: 800px){
+            .header{
+                background: orange;
+            }
+
+            .article-image{
+                width: auto;
+                /* 원래사이즈로 설정 */
+
+                /* max-width: 100%; */
+                /* 최대크기 100퍼로 설정 */
+
+                float: left;
+
+                margin-right: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header gap">
+        <!-- 클래스 두개 사용 가능-->
+        <h1 class="header-title">
+            실습
+        </h1>
+    </header>
+    <div class="content-container">
+        <article class="main-article gap">
+            <img class="article-image" src="images/hello.png" alt="hello">
+            <section>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio obcaecati suscipit nam illo ea! Aperiam itaque quae earum enim id.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis recusandae deleniti sed et qui at possimus, reiciendis tempora inventore a provident cupiditate aspernatur. Aliquid unde veniam maiores voluptates iste aut quaerat sequi hic labore. Quisquam consequatur, voluptate recusandae, repellendus modi illo, aperiam nobis aut nihil reprehenderit quo facere blanditiis tenetur?
+            </section>
+        </article>
+
+        <aside class="ad gap">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae consectetur vitae esse magni. Quas nam, magni dignissimos maiores, nostrum a eveniet maxime possimus inventore cum ullam perferendis? Harum, officiis saepe?
+        </aside>
+    </div>
+
+
+
+
+
+
+    <footer class="footer gap">
+        마무리
+    </footer>
+</body>
+</html>
