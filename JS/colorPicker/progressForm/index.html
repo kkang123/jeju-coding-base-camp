@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #333;
+            padding: 20px;
+            color: #fff;
+        }
+
+        form{
+            width: 50%;
+            border-radius: 10px;
+            background-color: purple;
+            padding: 20px;
+        }
+
+        form fieldset{
+            border: none;
+        }
+
+        form legend{
+            font-size: 1.2em;
+            text-align: center;
+        }
+
+        form label{
+            display: block;
+        }
+
+        form input{
+            display: block;
+            width: 100%;
+            padding: 0%;
+            margin-bottom: 10px;
+        }
+
+        
+        form input:valid{
+            background-color: royalblue;
+            /* 작성시 작성요령에 적절하면 색 바뀜 */
+        }
+
+        #progress{
+            width: 100%;
+        }
+
+        form button{
+            background-color: darkslategray;
+            width: 100%;
+            padding:  10px;
+            cursor: pointer;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <!-- form안에서 구역 나누어 줌 -->
+            <legend>진행상황을 보여주는 설문지</legend>
+            <progress max="100" value="0" id="progress"></progress>
+            <!-- value는 막대 수치를 보여줌 -->
+            <p class="msg">설문지를 작성하세요!</p>
+
+            <label for="q1">질문 1.</label>
+            <input type="text" id="q1" required>
+            <!-- required는 반드시 작성해야 할 때 사용 -->
+
+            <label for="q2">질문 2.</label>
+            <input type="text" id="q2" required>
+
+            <label for="q3">질문 3.</label>
+            <input type="text" id="q3" required>
+
+            <label for="q4">질문 4.</label>
+            <input type="text" id="q4" required>
+
+            <label for="q5">질문 5.</label>
+            <input type="text" id="q5" required>
+
+            <button type="sumit">제출</button>
+        </fieldset>
+    </form>
+
+
+    <script>
+       const progressBar = document.querySelector('progress');
+        const message = document.querySelector('.msg');
+        const mainForm = document.querySelector('form');
+        const inputs = document.querySelectorAll('input');
+
+
+        // keyup 키보드 입력 시 이벤트 발생
+        mainForm.addEventListener('keyup', () => {
+            let validCounter = 0;
+            // 카운팅 하는 변수
+
+            inputs.forEach((item) => {
+                console.log(item.validity);
+                if(item.validity.valid){
+                    validCounter++;
+                // 적절한 input 값마당 validcounter 증가
+                } 
+            })
+
+            let progressValue = validCounter * 100 / inputs.length;
+
+            switch(validCounter){
+                case 1:
+                    message.textContent = "좋습니다! 계속 진행시켜~";
+                    // progressBar.setAttribute('value', '20');
+                    // progressBar.setAttribute('value', `${ validCounter * 20}`);
+                    progressBar.setAttribute('value', progressValue);   
+
+                    break;
+                case 2:
+                    message.textContent = "좋은 답변 계속 진행시켜~";
+                    // progressBar.setAttribute('value', `${ validCounter * 20}`);
+                    progressBar.setAttribute('value', progressValue);
+                    break;
+                case 3:
+                    message.textContent = "절반 이상";
+                    // progressBar.setAttribute('value', `${ validCounter * 20}`);
+                    progressBar.setAttribute('value', progressValue);
+                    break;
+                case 4:
+                    message.textContent = "거의 다됨";
+                    // progressBar.setAttribute('value', `${ validCounter * 20}`);
+                    progressBar.setAttribute('value', progressValue);
+                    break;
+                case 5:
+                    message.textContent = "마무으리";
+                    // progressBar.setAttribute('value', `${ validCounter * 20}`);
+                    progressBar.setAttribute('value', progressValue);
+                    break;
+                default:
+                progressBar.setAttribute('value', 0);
+            }
+        })
+    </script>
+</body>
+</html>
