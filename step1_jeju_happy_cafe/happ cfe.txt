@@ -1,0 +1,5 @@
+카카오 오븐 기획 후 클라우드 플레어 서버 배포
+-test-
+
+카카오 오븐 : https://ovenapp.io/project/Imkj5E15T4Of69LtfvDcB0JcJRZhYUXg#URj0O
+클라우드 플레어 서버 : https://jeje-happy-cafe-test.pages.dev/
